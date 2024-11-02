@@ -21,7 +21,7 @@ def main():
         return
 
     # Example static memory address in Dolphin's process space (replace with actual known address)
-    test_address = 0x8154B8B0  # This is an example; replace with a known valid address
+    test_address = 0x80355193  # This is an example; replace with a known valid address
     read_size = 4  # Number of bytes to read
 
     while True:

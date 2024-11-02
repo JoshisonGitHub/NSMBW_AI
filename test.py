@@ -11,7 +11,7 @@ def is_admin():
         return False
 
 # Addresses for Mario's X and Y positions (replace these with your values)
-MARIO_X_ADDR = 0x8154B8B0  # Replace with the actual address for Mario's X position
+MARIO_X_ADDR = 0x8120ADF4  # Replace with the actual address for Mario's X position
 MARIO_Y_ADDR = 0x8154B8B4  # Replace with the actual address for Mario's Y position
 
 # Dolphin process name (ensure it's running)

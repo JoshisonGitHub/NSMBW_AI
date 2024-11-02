@@ -38,8 +38,8 @@ def main():
     module = pymem.process.module_from_name(pm.process_handle, 'Dolphin.exe').lpBaseOfDll
 
     # Use the verified addresses
-    x_address = 0x8154B8B0  # Replace with the correct value
-    y_address = 0x8154B8B4  # Replace with the correct value
+    x_address = 0x8120ADF4  # Replace with the correct value
+    y_address = 0x815E38E4  # Replace with the correct value
     life_status_address = 0x80429CA3  # Replace with the correct value
 
     while True:
