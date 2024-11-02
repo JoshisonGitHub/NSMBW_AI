@@ -1,5 +1,14 @@
 import pymem
 import time
+import os
+import sys
+import ctypes
+
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
 
 # Addresses for Mario's X and Y positions (replace these with your values)
 MARIO_X_ADDR = 0x8154B8B0  # Replace with the actual address for Mario's X position
@@ -31,4 +40,8 @@ def read_position():
         print("Stopped reading Mario's position.")
 
 # Run the position reading function
-read_position()
+
+
+python_path = os.path.join(os.environ['SYSTEMROOT'], 'python.exe')  # Replace with `python` if needed
+script_path = "C:\\Users\\jlhb83\\Desktop\\Python Projects\\NSMBW_AI\\test.py"
+os.system(f'runas /user:Administrator "{python_path}""')
