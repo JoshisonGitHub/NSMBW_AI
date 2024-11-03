@@ -29,8 +29,8 @@ hsv_colors = {
     ],
     "YELLOW": (np.array([32, 200, 200]), np.array([33, 255, 255])),     # Narrowed Yellow hue range
     "BLUE": (np.array([95, 150, 150]), np.array([135, 255, 255])),      # Expanded Blue hue range
-    "ORANGE": (np.array([19, 200, 200]), np.array([21, 255, 255])),     # Reduced Orange hue range
-    "OPEN": (np.array([148, 200, 200]), np.array([158, 255, 255]))      # Narrowed Purple hue range
+    "ORANGE": (np.array([15, 200, 200]), np.array([25, 255, 255])),     # Reduced Orange hue range
+    "OPEN": (np.array([135, 200, 200]), np.array([168, 255, 255]))      # Narrowed Purple hue range
 }
 
 
@@ -43,7 +43,8 @@ color_to_letter = {
     "RED": "s",
     "YELLOW": "d",
     "BLUE": "f",
-    "ORANGE": "j"
+    "ORANGE": "j",
+    "OPEN": "up"
 }
 
 # Initialize the video capture (change 1 to 0 if necessary)
@@ -117,7 +118,8 @@ while True:
                 print("Detected colors:", converted_letters)
                 # Use keyboard.send to press and release each key
                 for key in converted_letters:
-                        keyboard.press(key)
+                        if key != "up":
+                            keyboard.press(key)
                 keyboard.press(STRUM)
                 for key in converted_letters:
                     keyboard.release(key)
